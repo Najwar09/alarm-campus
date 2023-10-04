@@ -1,15 +1,19 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+// HomeScreen.js
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
-const Home = () => {
-    useEffect(() => {
-        
-    }, [])
+function HomeScreen() {
+  const navigation = useNavigation();
   return (
     <View>
-      <Text>index</Text>
+      <Text>Halaman Home</Text>
+      <Button
+        title="Pindah ke Halaman Login"
+        onPress={() => navigation.navigate('login')}
+      />
     </View>
-  )
+  );
 }
 
-export default Home
+export default HomeScreen;
